@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        {{vm.title}}
+    </div>
+
+    <div class="panel-body">
+        <div class="myclass">
+            <a ui-sref=".info"
+               ui-sref-active="active">
+                Basic Information
+            </a>
+            <a ui-sref=".price"
+               ui-sref-active="active">
+                Price Details
+            </a>
+
+        </div>
+
+        <div ui-view></div>
+    </div>
+
+</div>
+<!-- shouldnt be shown alone. cant be reachable with manual url entrance
+ abstract view ( described in router ) -->

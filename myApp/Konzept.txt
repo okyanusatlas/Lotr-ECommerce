@@ -1,0 +1,7 @@
+#User Stories ;
+
+- As a product Manager  , I can :
+1)Browse the list of the products ,review key product Information
+2)See small images of  products
+3)Select a product to  view details
+4)Edit the selected product

@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="productManagement">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTR Online Shop Admin Panel </title>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="library/css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="library/css/bootstrap-3.3.7-dist/css/custom.css">
+
+    <!-- Bootstrap.js -jQuery -->
+    <script src="library/jquery-3.2.1.js"></script>
+    <script src="library/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!-- Angular Libs -->
+    <script src="library/angular.js"></script>
+    <script src="library/angular-locale_de-de.js"></script>
+    <script src="library/angular-resource.min.js"></script>
+    <script src="library/angular-mocks.js"></script>
+    <script src="https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.min.js"></script>
+    <script src="library/ui-utils.js"></script>
+    <script src="library/ui-bootstrap-tpls-0.11.0.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="app/app.js"></script>
+
+    <script src="app/products/ProductListCtrl.js"></script>
+    <script src="app/products/productDetailCtrl.js"></script>
+    <script src="app/products/productEditCtrl.js"></script>
+
+    <script src="app/common/services/common.services.js"></script>
+    <script src="app/common/services/productResource.js"></script>
+    <script src="app/common/services/productResourceMock.js"></script>
+    <script src="app/common/services/productService.js"></script>
+
+
+</head>
+<body>
+<!-- main view -->
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <a class="navbar-brand" ui-sref="home">Acme Product Management</a>
+        <div class="navbar-header">
+            <!--  data-toggle="collapse" data-target="navbar-collapse"  //Doesnt work for responsive design
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button> -->
+        </div>
+             <ul class="nav navbar-nav">
+                 <!-- navigation ui-router-->
+                <li><a ui-sref="productList">Product List</a></li>
+                 <!-- on click to Add Product chose id:0 -->
+                <li><a ui-sref="productEdit.info({productId:0})">Add Product</a></li>
+             </ul>
+
+    </div>
+</nav>
+<!-- here comes the views -->
+<div class="container">
+    <div ui-view></div>
+</div>
+
+</body>
+</html>
